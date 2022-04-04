@@ -20,7 +20,7 @@ for key in img.header:
 results['headers']['base_affine'] = img.header.get_base_affine().tolist()
 
 data = img.get_fdata()
-results["voxel_histogram"] = np.histogram(data, bins=100, range=(0, 3000))
+results["voxel_histogram"] = np.histogram(data, bins=100, range=(0, 1500))
 
 if not os.path.exists("output"):
     os.makedirs("output")
